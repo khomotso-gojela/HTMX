@@ -18,7 +18,23 @@
   </head>
   <body>
     <div class="container">
-      
+      <div
+        class="card"
+        style="width: 18rem"
+        hx-target="this"
+        hx-swap="outerHTML"
+      >
+        <div class="card-body">
+          <h5 class="card-title">Greg Lim</h5>
+          <p class="card-text">
+            Follower of Christ | Author of Best-selling Amazon Tech Books and
+            Creator of Coding Courses
+          </p>
+          <button href="#" class="btn btn-primary" hx-get="/user/1/edit">
+            Click To Edit
+          </button>
+        </div>
+      </div>
     </div>
 
     <script
