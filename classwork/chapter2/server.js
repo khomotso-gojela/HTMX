@@ -12,7 +12,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.post('/calculate', (req, res) => {
-    const {height,weight} = req.body
+    const { height,weight } = req.body
+    
     let BMI = weight / (height* height)
 
     res.send(`<p>Height of ${height} & Weight of ${weight} gives you BMI of ${BMI.toFixed(2)}</p>`);

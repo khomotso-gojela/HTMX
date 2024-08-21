@@ -12,6 +12,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.post("/search", async (req, res) => {
+  
   const searchTerm = req.body.search.toLowerCase();
   if (!searchTerm) {
     return res.send("<tr></tr>");

@@ -14,22 +14,27 @@ app.use(express.json());
 // Handle GET request for profile edit
 app.get("/user/:id/edit", (req, res) => {
   // send an HTML form for editing
-  res.send(/*html*/`
+  res.send(/*html*/ `
   <form hx-put="/user/1" hx-target="this" hx-swap="outerHTML">
-  <div class="mb-3">
-  <label for="name" class="form-label">Name</label>
-  <input type="text" class="form-control" id="name" name="name" value="Greg
- Lim">
-  </div>
-  <div class="mb-3">
-  <label for="bio" class="form-label">Bio</label>
-  <textarea type="text" class="form-control" id="bio" name="bio">Follower of Christ |
- Author of Best-selling Amazon Tech Books and Creator of Coding Courses
-  </textarea>
-  </div>
-  <button type="submit" class="btn btn-primary">
-Save Changes
- </button>
+    <div class="mb-3">
+      <label for="name" class="form-label">Name</label>
+      <input type="text" class="form-control" id="name" name="name" value="Motso
+      Gojela">
+    </div>
+    <div class="mb-3">
+      <label for="bio" class="form-label">Bio</label>
+      <textarea type="text" class="form-control" id="bio" name="bio">
+        Old
+      </textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">
+        Save Changes
+    </button>
+    <button type="submit" hx-get="/index.html"
+      class="btn btn-secondary">
+      Cancel
+    </button>
+
  </form>
  `);
 });
