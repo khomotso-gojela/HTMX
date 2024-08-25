@@ -13,6 +13,7 @@ app.use(express.json());
 
 // Handle GET request for profile edit
 app.get("/user/:id/edit", (req, res) => {
+  
   // send an HTML form for editing
   res.send(/*html*/ `
   <form hx-put="/user/1" hx-target="this" hx-swap="outerHTML">
