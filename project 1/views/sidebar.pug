@@ -1,0 +1,17 @@
+ul.contact-list
+  each book in books
+    li
+      a(
+        href=`/books/${book.id}`,
+        hx-get=`/books/${book.id}`,
+        hx-target='#content'
+        hx-push-url='true',
+      )= book.name
+
+div.actions
+  a(
+    href='/books/new',
+    hx-get='/books/new',
+    hx-target='#content',
+    hx-push-url='true'
+  ) New Book
